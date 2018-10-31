@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie';
 
 @Injectable()
 export class MoviesService {
-  private movies: Array<{}>;
+  private movies: Array<Movie>;
   constructor() {
       this.movies = [
           {
@@ -20,11 +21,11 @@ export class MoviesService {
       ]
   }
 
-  getAll(): Array<{}> {
+  getAll(): Array<Movie> {
       return this.movies;
   }
 
-  push(movie: {}) {
+  push(movie: Movie) {
       this.movies.push(movie);
   }
 }
